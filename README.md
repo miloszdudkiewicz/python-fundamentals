@@ -12,3 +12,6 @@ This repository documents my journey of learning Python.
 
 ## Goal
 Building a strong foundation in Python before moving into ML and PyTorch.
+
+
+testing git, update to check hash difference
