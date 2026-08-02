@@ -40,6 +40,6 @@ def find_sum(numbers):
 
     return current_sum
 
-print(find_sum([]))
+
 
     
