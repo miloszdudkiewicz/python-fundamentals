@@ -14,6 +14,6 @@ def find_max(numbers):
             current_max = number
 
     return current_max
-print (find_max([]))   
+
 
     
