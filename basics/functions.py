@@ -73,3 +73,9 @@ def contains(numbers, value):
             return True
         
     return False
+
+def find_first_even(numbers):
+    for number in numbers:
+        if number % 2 == 0:
+            return number
+    return None
