@@ -79,3 +79,26 @@ def find_first_even(numbers):
         if number % 2 == 0:
             return number
     return None
+
+def count_above_average(numbers):
+    if not numbers:
+        raise ValueError("The list cannot be empty")
+    
+    current_sum = 0
+    above_average = 0
+    for number in numbers:
+        current_sum += number
+
+    average = current_sum / len(numbers)
+
+    for number in numbers:
+        if number > average:
+            above_average += 1
+
+    return above_average
+
+print(count_above_average([5,5,5,5]))
+
+
+    
+    
