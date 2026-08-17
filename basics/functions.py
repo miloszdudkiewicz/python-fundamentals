@@ -97,8 +97,12 @@ def count_above_average(numbers):
 
     return above_average
 
-print(count_above_average([5,5,5,5]))
+def remove_duplicates(numbers):
+    unique_numbers = []
+    for number in numbers:
+        if number not in unique_numbers:
+            unique_numbers.append(number)
 
-
+    return unique_numbers
     
-    
+print(remove_duplicates([-1, -1, 0, -1, 2]))
