@@ -105,4 +105,3 @@ def remove_duplicates(numbers):
 
     return unique_numbers
     
-print(remove_duplicates([-1, -1, 0, -1, 2]))
