@@ -104,4 +104,23 @@ def remove_duplicates(numbers):
             unique_numbers.append(number)
 
     return unique_numbers
+
+def find_most_frequent(numbers):
+    if not numbers:
+        raise ValueError("The list cannot be empty")
+    
+    most_frequent = numbers[0]
+    highest_count = 1
+
+    for number in numbers: 
+        current_count = count_occurrences(numbers, number)
+
+        if current_count > highest_count:
+            highest_count = current_count
+            most_frequent = number
+
+    return most_frequent
+
+
+
     
