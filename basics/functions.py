@@ -59,6 +59,7 @@ def find_second_highest(numbers):
 
     return second_highest
 
+
 def count_occurrences(numbers, to_count):
 
     counter = 0
@@ -129,5 +130,19 @@ def find_missing_number(numbers):
         if number not in numbers:
             return number
 
+def find_two_largest(numbers):
+    if len(numbers) < 2:
+        raise ValueError("The list must contain at least 2 values")
 
+    highest = numbers[0]
+    second_highest = None
+
+    for number in numbers:
+        if number > highest:
+            highest, second_highest = number, highest
+        elif number < highest and (second_highest is None or number > second_highest):
+            second_highest = number
+    if second_highest is None:
+        raise ValueError("The list must contain at least 2 distinct values")
     
+    return [highest, second_highest]
