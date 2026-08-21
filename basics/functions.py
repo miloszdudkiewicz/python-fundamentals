@@ -121,6 +121,13 @@ def find_most_frequent(numbers):
 
     return most_frequent
 
+def find_missing_number(numbers):
+    if not numbers:
+        raise ValueError("The list cannot be empty")
+
+    for number in range(1, len(numbers) + 2):
+        if number not in numbers:
+            return number
 
 
     
