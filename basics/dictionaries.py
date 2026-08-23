@@ -37,3 +37,20 @@ def merge_dictionaries_keep_all(dict1, dict2):
             result[key] = [value]
 
     return result
+
+def group_by_first_letter(words):
+    result = {}
+
+    for word in words:
+        if not word:
+            raise ValueError("Words must not contain empty strings")
+        
+        first_letter = word[0]
+
+        if first_letter in result:
+            result[first_letter].append(word)
+        else:
+            result[first_letter] = [word]
+            
+    return result
+            
