@@ -62,7 +62,6 @@ def find_key_with_highest_value(data):
     highest_value = None
 
     for key, value in data.items():
-        
         if highest_value is None:
             highest_key = key
             highest_value = value
@@ -71,3 +70,10 @@ def find_key_with_highest_value(data):
             highest_value = value
             
     return highest_key
+
+def filter_by_min_value(data, minimum):
+    result = {}
+    for key, value in data.items():
+        if value >= minimum:
+            result[key] = value
+    return result
