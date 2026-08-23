@@ -53,4 +53,21 @@ def group_by_first_letter(words):
             result[first_letter] = [word]
             
     return result
+
+def find_key_with_highest_value(data):
+    if not data:
+        raise ValueError("Dictionary cannot be empty")
+
+    highest_key = None
+    highest_value = None
+
+    for key, value in data.items():
+        
+        if highest_value is None:
+            highest_key = key
+            highest_value = value
+        elif value > highest_value:
+            highest_key = key
+            highest_value = value
             
+    return highest_key
