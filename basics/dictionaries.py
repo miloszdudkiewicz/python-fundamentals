@@ -77,3 +77,22 @@ def filter_by_min_value(data, minimum):
         if value >= minimum:
             result[key] = value
     return result
+
+def count_values_above_average(data):
+    if not data:
+        raise ValueError("Data cannot be empty")
+    
+    values_sum = 0
+    above_avg_counter = 0
+
+    for value in data.values():
+        values_sum += value
+
+    values_avg = values_sum / len(data)
+
+    for value in data.values():
+        if value > values_avg:
+            above_avg_counter += 1
+
+    return above_avg_counter
+print(count_values_above_average({}))
