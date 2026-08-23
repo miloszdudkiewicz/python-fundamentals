@@ -95,4 +95,21 @@ def count_values_above_average(data):
             above_avg_counter += 1
 
     return above_avg_counter
-print(count_values_above_average({}))
+
+def find_duplicate_values(data):
+    counts = {}
+    duplicates = []
+
+    for value in data.values():
+        if value not in counts:
+            counts[value] = 1
+        else:
+            counts[value] += 1
+
+    for value, count in counts.items():
+        if count > 1:
+            duplicates.append(value)
+
+    return duplicates
+
+
