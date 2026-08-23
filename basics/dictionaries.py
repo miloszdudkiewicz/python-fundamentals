@@ -8,3 +8,9 @@ def count_frequency(numbers):
             frequency[number] = 1
 
     return frequency
+
+def invert_dictionary(data):
+    inverted = {}
+    for key, value in data.items():
+        inverted[value] = key
+    return inverted
