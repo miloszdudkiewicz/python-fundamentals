@@ -6,3 +6,9 @@ def count_file_lines(file_path):
             counter += 1
 
     return counter
+
+def read_file_content(file_path):
+    with open(file_path, "r") as file:
+        file_text = file.read()
+
+    return file_text
