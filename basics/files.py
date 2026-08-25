@@ -35,4 +35,16 @@ def analyze_file(file_path):
         "words": word_counter,
         "characters": char_counter
     }
-print(analyze_file("basics/test1"))
+
+def find_longest_line(file_path):
+    longest_length = 0
+    longest_line_number = 0
+    longest_line = ""
+    with open(file_path, "r") as file:
+        for line_number, line in enumerate(file, start=1):
+            if len(line.strip()) > longest_length:
+                longest_length = len(line.strip())
+                longest_line_number = line_number
+                longest_line = line.strip()
+
+    return longest_line, longest_line_number
