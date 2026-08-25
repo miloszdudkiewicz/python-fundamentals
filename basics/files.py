@@ -48,3 +48,18 @@ def find_longest_line(file_path):
                 longest_line = line.strip()
 
     return longest_line, longest_line_number
+
+def count_word_occurrences(file_path, target_word):
+    counter = 0
+    target_word = target_word.lower()
+    with open(file_path, "r") as file:
+        for line in file:
+            words = line.lower().split()
+
+            for word in words:
+                if word == target_word:
+                    counter += 1
+
+    return counter
+
+print(count_word_occurrences("basics/test", "python"))
