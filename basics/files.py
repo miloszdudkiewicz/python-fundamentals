@@ -12,3 +12,8 @@ def read_file_content(file_path):
         file_text = file.read()
 
     return file_text
+
+def write_file_content(file_path, text):
+    with open(file_path, "w") as file:
+        file.write(text)
+write_file_content("basics/output.txt", "Second text")
